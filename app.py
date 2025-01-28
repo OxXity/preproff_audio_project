@@ -142,6 +142,24 @@ def internal_server_error(e):
     return render_template('500.html'), 500
 
 
+@app.route('/upl_files')
+def upl_files():
+    return render_template('upl_files.html')
+
+
+@app.route('/uploaded_files')
+def uploaded_files():
+    if 'email' not in session:
+        flash('You need to log in first', 'danger')
+        return redirect(url_for('login'))
+
+    email = session['email']
+    user = User.query.filter_by(email=email).first()
+    user_saves = UserSaves.query.filter_by(user_id=user.id).all()
+
+    return render_template('uploaded_files.html', user_saves=user_saves)
+
+
 if __name__ == '__main__':
     if not os.path.exists(app.config['UPLOAD_FOLDER']):
         os.makedirs(app.config['UPLOAD_FOLDER'])
