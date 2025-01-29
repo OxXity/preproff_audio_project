@@ -15,6 +15,7 @@ app.config['UPLOAD_FOLDER'] = 'uploads/'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 app.config['TEMP_FOLDER'] = 'temp/'  # Temporary folder for zip files
 
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
@@ -29,6 +30,7 @@ class User(db.Model):
     def __repr__(self):
         return f'User({self.email})'
 
+
 class UserSaves(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, nullable=False)
@@ -39,9 +41,11 @@ class UserSaves(db.Model):
     def __repr__(self):
         return f'UserSaves({self.title}, {self.path}, {self.music_path})'
 
+
 @app.route('/')
 def home():
     return render_template('index.html')
+
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -64,6 +68,7 @@ def register():
                 flash(f'Database error: {e}', 'danger')
     return render_template('register.html')
 
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -78,12 +83,14 @@ def login():
             flash('Invalid email or password', 'danger')
     return render_template('login.html')
 
+
 @app.route('/profile')
 def profile():
     if 'email' not in session:
         flash('You need to log in first', 'danger')
         return redirect(url_for('login'))
     return render_template('profile.html')
+
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
@@ -132,17 +139,21 @@ def upload_file():
     flash('Files successfully uploaded', 'success')
     return redirect(url_for('profile'))
 
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
+
 
 @app.errorhandler(500)
 def internal_server_error(e):
     return render_template('500.html'), 500
 
+
 @app.route('/upl_files')
 def upl_files():
     return render_template('upl_files.html')
+
 
 @app.route('/uploaded_files')
 def uploaded_files():
@@ -155,6 +166,7 @@ def uploaded_files():
     user_saves = UserSaves.query.filter_by(user_id=user.id).all()
 
     return render_template('uploaded_files.html', user_saves=user_saves)
+
 
 @app.route('/download_images/<int:upload_id>')
 def download_images(upload_id):
@@ -176,6 +188,7 @@ def download_images(upload_id):
 
     return send_from_directory(temp_folder, f'images_{upload_id}.zip', as_attachment=True)
 
+
 @app.route('/download_music/<int:upload_id>')
 def download_music(upload_id):
     user_save = UserSaves.query.get(upload_id)
@@ -185,7 +198,9 @@ def download_music(upload_id):
 
     music_path = user_save.music_path
     mime_type, _ = mimetypes.guess_type(music_path)
-    return send_from_directory(app.config['UPLOAD_FOLDER'], os.path.basename(music_path), mimetype=mime_type, as_attachment=True)
+    return send_from_directory(app.config['UPLOAD_FOLDER'], os.path.basename(music_path), mimetype=mime_type,
+                               as_attachment=True)
+
 
 @app.route('/play_music/<int:upload_id>')
 def play_music(upload_id):
@@ -197,6 +212,7 @@ def play_music(upload_id):
     music_path = user_save.music_path
     mime_type, _ = mimetypes.guess_type(music_path)
     return send_from_directory(app.config['UPLOAD_FOLDER'], os.path.basename(music_path), mimetype=mime_type)
+
 
 if __name__ == '__main__':
     if not os.path.exists(app.config['UPLOAD_FOLDER']):
