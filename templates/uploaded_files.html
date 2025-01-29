@@ -18,6 +18,13 @@
         .content {
             flex: 1;
         }
+        .upload-item {
+            margin-bottom: 2rem;
+        }
+        .upload-item:not(:last-child) {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 2rem;
+        }
     </style>
 </head>
 <body>
@@ -45,13 +52,21 @@
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            <h1 class="card-title text-center mb-4">Uploaded Files</h1>
-                            <ul class="list-group">
-                                {% for user_save in user_saves %}
-                                    <li class="list-group-item">{{ user_save.title }}: <a href="{{ url_for('static', filename=user_save.path) }}" target="_blank">{{ user_save.path }}</a></li>
-                                {% endfor %}
-                            </ul>
-                            <a href="{{ url_for('profile') }}" class="btn btn-secondary btn-block mt-3">Back to Profile</a>
+                            <h1 class="card-title text-center mb-4">Загруженные файлы</h1>
+                            {% for user_save in user_saves %}
+                                <div class="upload-item">
+                                    <h2 class="mb-3">{{ user_save.title }}</h2>
+                                    {% if user_save.music_path %}
+                                        <audio controls>
+                                            <source src="{{ url_for('play_music', upload_id=user_save.id) }}" type="audio/mpeg">
+                                            Проигрывание музыки не потдерживается браузером:(.
+                                        </audio>
+                                        <p><a href="{{ url_for('download_music', upload_id=user_save.id) }}" class="btn btn-secondary mt-2" download>Скачать музыку</a></p>
+                                    {% endif %}
+                                    <p><a href="{{ url_for('download_images', upload_id=user_save.id) }}" class="btn btn-secondary">Скачать ноты</a></p>
+                                </div>
+                            {% endfor %}
+                            <a href="{{ url_for('profile') }}" class="btn btn-secondary btn-block mt-3">К профилю</a>
                         </div>
                     </div>
                 </div>
@@ -60,7 +75,7 @@
 
         <footer class="bg-dark text-white text-center py-3">
             <div class="container">
-                <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+                <p>&copy; 2024 Good place. All rights reserved.</p>
             </div>
         </footer>
     </div>

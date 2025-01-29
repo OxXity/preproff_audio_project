@@ -45,7 +45,7 @@
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            <h1 class="card-title text-center mb-4">Upload Files</h1>
+                            <h1 class="card-title text-center mb-4">Загрузить файлы</h1>
                             <form action="/upload" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label for="title">Title:</label>
@@ -55,9 +55,9 @@
                                     <label for="files">Select files:</label>
                                     <input type="file" class="form-control-file" id="files" name="files" multiple required>
                                 </div><br>
-                                <button type="submit" class="btn btn-primary btn-block">Upload</button>
+                                <button type="submit" class="btn btn-secondary btn-block">Загрузить</button>
                             </form>
-                            <a href="{{ url_for('profile') }}" class="btn btn-secondary btn-block mt-3">Back to Profile</a>
+                            <a href="{{ url_for('profile') }}" class="btn btn-secondary btn-block mt-3">К профилю</a>
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
 
         <footer class="bg-dark text-white text-center py-3">
             <div class="container">
-                <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+                <p>&copy; 2024 Good place. All rights reserved.</p>
             </div>
         </footer>
     </div>
