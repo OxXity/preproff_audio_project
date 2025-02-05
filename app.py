@@ -3,8 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 from werkzeug.security import generate_password_hash, check_password_hash
 from sqlalchemy.exc import SQLAlchemyError
-import zipfile  # Import zipfile from the standard library
-import mimetypes  # Import mimetypes to get the correct MIME type
+import zipfile
+import mimetypes
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
@@ -13,7 +13,7 @@ app.secret_key = 'supersecretkey'
 db = SQLAlchemy(app)
 app.config['UPLOAD_FOLDER'] = 'uploads/'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
-app.config['TEMP_FOLDER'] = 'temp/'  # Temporary folder for zip files
+app.config['TEMP_FOLDER'] = 'temp/'
 
 
 class User(db.Model):
