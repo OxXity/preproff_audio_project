@@ -1,0 +1,100 @@
+2025-02-10 17:33:33,565 INFO [score_8]                 Book.java:601  | 1 sheet in C:\Users\123\PycharmProjects\preproff_audio_project\uploads\score_8.png
+2025-02-10 17:33:33,715 INFO []                 Book.java:2515 | Stored /book.xml
+2025-02-10 17:33:33,716 INFO []                 Book.java:2476 | Book stored as C:\Users\123\PycharmProjects\preproff_audio_project\conv\score_8.omr
+2025-02-10 17:33:33,732 INFO []                 Book.java:1963 | Book reaching PAGE on sheets:[#1]
+2025-02-10 17:33:33,734 INFO [score_8]       StepMonitoring.java:98   | LOAD
+2025-02-10 17:33:33,896 INFO [score_8]                 Book.java:1845 | Loaded image 1 2977x4208 from C:\Users\123\PycharmProjects\preproff_audio_project\uploads\score_8.png
+2025-02-10 17:33:33,903 INFO [score_8]            ImageUtil.java:74   | Converting gray+alpha to gray
+2025-02-10 17:33:34,093 INFO [score_8]       StepMonitoring.java:98   | BINARY
+2025-02-10 17:33:34,607 INFO [score_8]       StepMonitoring.java:98   | SCALE
+2025-02-10 17:33:34,631 INFO [score_8]         ScaleBuilder.java:234  | Beam  guessed height: 12 -- 0.50 of 25 interline
+2025-02-10 17:33:34,633 INFO [score_8]         ScaleBuilder.java:257  | Beam measured height: 13 -- 0.33 of [7..25] range at 782% of needed quorum
+2025-02-10 17:33:34,633 INFO [score_8]            ScaleStep.java:65   | Scale{ interline(25,25,25) line(2,3,3) beam(13)}
+2025-02-10 17:33:34,634 INFO [score_8]       StepMonitoring.java:98   | GRID
+2025-02-10 17:33:35,298 INFO [score_8]       LinesRetriever.java:1490 | Global slope: 0.00000
+2025-02-10 17:33:35,370 INFO [score_8]    ClustersRetriever.java:334  | Retrieved line clusters: 10 of sizes [5] with interline(25,25,25)
+2025-02-10 17:33:35,589 INFO [score_8]            PeakGraph.java:310  | Systems: #1[1, 2] #2[3, 4] #3[5, 6] #4[7, 8] #5[9, 10]
+2025-02-10 17:33:35,995 INFO [score_8]        SystemManager.java:736  | 1 part along 5 systems
+2025-02-10 17:33:35,997 INFO [score_8]                 Book.java:584  | Created scores: [{Score 1}]
+2025-02-10 17:33:35,998 INFO [score_8]       StepMonitoring.java:98   | HEADERS
+2025-02-10 17:33:36,272 INFO [score_8]      BasicClassifier.java:277  | Classifier loaded XML norms.
+2025-02-10 17:33:36,280 INFO [score_8]   AbstractClassifier.java:396  | Classifier data loaded from default uri jar:file:/C:/Users/123/PycharmProjects/preproff_audio_project/Audiveris-5.3.1/Audiveris-5.3.1/lib/audiveris.jar!/res/basic-classifier.zip
+2025-02-10 17:33:37,327 INFO [score_8]       StepMonitoring.java:98   | STEM_SEEDS
+2025-02-10 17:33:37,461 INFO [score_8]            ImageUtil.java:204  | Discarding alpha band ...
+2025-02-10 17:33:37,670 INFO [score_8]            ImageUtil.java:122  | Converting max RGB to gray
+2025-02-10 17:33:37,921 INFO [score_8]        StemSeedsStep.java:86   | stem(4 max:4)
+2025-02-10 17:33:37,978 INFO [score_8]       StepMonitoring.java:98   | BEAMS
+2025-02-10 17:33:42,623 INFO [score_8]       StepMonitoring.java:98   | LEDGERS
+2025-02-10 17:33:43,088 INFO [score_8]       StepMonitoring.java:98   | HEADS
+2025-02-10 17:33:51,979 INFO [score_8]        HeadSeedTally.java:235  | Scale information: HeadSeeds{NOTEHEAD_BLACK[L:-0.7,R:-0.7]}
+2025-02-10 17:33:51,979 INFO [score_8]       StepMonitoring.java:98   | STEMS
+2025-02-10 17:33:53,149 INFO [score_8]       StepMonitoring.java:98   | REDUCTION
+2025-02-10 17:33:53,347 INFO [score_8]        ReductionStep.java:93   | Stems free length median value: 89 pixels, 3.6 interlines
+2025-02-10 17:33:53,348 INFO [score_8]       StepMonitoring.java:98   | CUE_BEAMS
+2025-02-10 17:33:53,348 INFO [score_8]         CueBeamsStep.java:81   | Step CUE_BEAMS is skipped because small heads switch is off
+2025-02-10 17:33:53,349 INFO [score_8]       StepMonitoring.java:98   | TEXTS
+2025-02-10 17:33:54,573 INFO [score_8]       StepMonitoring.java:98   | MEASURES
+2025-02-10 17:33:54,581 INFO [score_8]                 Page.java:308  | 22 raw measures: [4 in system#1, 4 in system#2, 4 in system#3, 4 in system#4, 6 in system#5]
+2025-02-10 17:33:54,582 INFO [score_8]       StepMonitoring.java:98   | CHORDS
+2025-02-10 17:33:54,603 INFO [score_8]       StepMonitoring.java:98   | CURVES
+2025-02-10 17:33:55,670 INFO [score_8]         SlursBuilder.java:240  | Slurs: 0
+2025-02-10 17:33:55,679 INFO [score_8]      SegmentsBuilder.java:155  | Segments: 3
+2025-02-10 17:33:55,685 INFO [score_8]       StepMonitoring.java:98   | SYMBOLS
+2025-02-10 17:33:56,256 INFO [score_8]       StepMonitoring.java:98   | LINKS
+2025-02-10 17:33:56,318 INFO [score_8]       StepMonitoring.java:98   | RHYTHMS
+2025-02-10 17:33:56,391 INFO [score_8]       StepMonitoring.java:98   | PAGE
+2025-02-10 17:33:56,400 INFO [score_8]                 Book.java:2535 | Book{score_8} storing
+2025-02-10 17:33:56,464 WARN [score_8]                 Book.java:2479 | Error storing Book{score_8} to C:\Users\123\PycharmProjects\preproff_audio_project\conv\score_8.omr ex:java.nio.file.NoSuchFileException: C:\Users\123\PycharmProjects\preproff_audio_project\conv\score_8.omr
+java.nio.file.NoSuchFileException: C:\Users\123\PycharmProjects\preproff_audio_project\conv\score_8.omr
+	at jdk.zipfs/jdk.nio.zipfs.ZipFileSystem.<init>(ZipFileSystem.java:166)
+	at jdk.zipfs/jdk.nio.zipfs.ZipFileSystemProvider.getZipFileSystem(ZipFileSystemProvider.java:125)
+	at jdk.zipfs/jdk.nio.zipfs.ZipFileSystemProvider.newFileSystem(ZipFileSystemProvider.java:106)
+	at java.base/java.nio.file.FileSystems.newFileSystem(FileSystems.java:339)
+	at org.audiveris.omr.util.ZipFileSystem.open(ZipFileSystem.java:111)
+	at org.audiveris.omr.sheet.Book.store(Book.java:2423)
+	at org.audiveris.omr.sheet.Book.store(Book.java:2381)
+	at org.audiveris.omr.sheet.Book.swapAllSheets(Book.java:2536)
+	at org.audiveris.omr.sheet.Book.reachBookStep(Book.java:2034)
+	at org.audiveris.omr.sheet.Book.transcribe(Book.java:2577)
+	at org.audiveris.omr.sheet.Book.export(Book.java:634)
+	at org.audiveris.omr.CLI$ProcessingTask.processBook(CLI.java:887)
+	at org.audiveris.omr.CLI$CliTask.call(CLI.java:490)
+	at org.audiveris.omr.Main.runBatchTasks(Main.java:363)
+	at org.audiveris.omr.Main.main(Main.java:252)
+	at Audiveris.main(Audiveris.java:50)
+2025-02-10 17:33:56,465 INFO [score_8]            SheetStub.java:1600 | Stub#1 storing
+2025-02-10 17:33:56,466 WARN [score_8]            SheetStub.java:1624 | Error swapping sheet
+java.nio.file.NoSuchFileException: C:\Users\123\PycharmProjects\preproff_audio_project\conv\score_8.omr
+	at jdk.zipfs/jdk.nio.zipfs.ZipFileSystem.<init>(ZipFileSystem.java:166)
+	at jdk.zipfs/jdk.nio.zipfs.ZipFileSystemProvider.getZipFileSystem(ZipFileSystemProvider.java:125)
+	at jdk.zipfs/jdk.nio.zipfs.ZipFileSystemProvider.newFileSystem(ZipFileSystemProvider.java:106)
+	at java.base/java.nio.file.FileSystems.newFileSystem(FileSystems.java:339)
+	at org.audiveris.omr.util.ZipFileSystem.open(ZipFileSystem.java:111)
+	at org.audiveris.omr.sheet.SheetStub.storeSheet(SheetStub.java:1576)
+	at org.audiveris.omr.sheet.SheetStub.swapSheet(SheetStub.java:1601)
+	at org.audiveris.omr.sheet.Book.swapAllSheets(Book.java:2547)
+	at org.audiveris.omr.sheet.Book.reachBookStep(Book.java:2034)
+	at org.audiveris.omr.sheet.Book.transcribe(Book.java:2577)
+	at org.audiveris.omr.sheet.Book.export(Book.java:634)
+	at org.audiveris.omr.CLI$ProcessingTask.processBook(CLI.java:887)
+	at org.audiveris.omr.CLI$CliTask.call(CLI.java:490)
+	at org.audiveris.omr.Main.runBatchTasks(Main.java:363)
+	at org.audiveris.omr.Main.main(Main.java:252)
+	at Audiveris.main(Audiveris.java:50)
+2025-02-10 17:33:56,517 INFO [score_8]                 Book.java:2035 | End of Stub#1 memory: 117,479,680
+2025-02-10 17:33:56,898 INFO [score_8]      PartwiseBuilder.java:2645 | Exporting sheet(s): [#1]
+2025-02-10 17:33:57,040 INFO [score_8]        ScoreExporter.java:164  | Score score_8 exported to C:\Users\123\PycharmProjects\preproff_audio_project\conv\score_8.mxl
+2025-02-10 17:33:57,094 WARN [score_8]                 Book.java:2479 | Error storing Book{score_8} to C:\Users\123\PycharmProjects\preproff_audio_project\conv\score_8.omr ex:java.nio.file.NoSuchFileException: C:\Users\123\PycharmProjects\preproff_audio_project\conv\score_8.omr
+java.nio.file.NoSuchFileException: C:\Users\123\PycharmProjects\preproff_audio_project\conv\score_8.omr
+	at jdk.zipfs/jdk.nio.zipfs.ZipFileSystem.<init>(ZipFileSystem.java:166)
+	at jdk.zipfs/jdk.nio.zipfs.ZipFileSystemProvider.getZipFileSystem(ZipFileSystemProvider.java:125)
+	at jdk.zipfs/jdk.nio.zipfs.ZipFileSystemProvider.newFileSystem(ZipFileSystemProvider.java:106)
+	at java.base/java.nio.file.FileSystems.newFileSystem(FileSystems.java:339)
+	at org.audiveris.omr.util.ZipFileSystem.open(ZipFileSystem.java:111)
+	at org.audiveris.omr.sheet.Book.store(Book.java:2423)
+	at org.audiveris.omr.CLI$ProcessingTask.processBook(CLI.java:921)
+	at org.audiveris.omr.CLI$CliTask.call(CLI.java:490)
+	at org.audiveris.omr.Main.runBatchTasks(Main.java:363)
+	at org.audiveris.omr.Main.main(Main.java:252)
+	at Audiveris.main(Audiveris.java:50)
+2025-02-10 17:33:57,095 INFO [score_8]                Score.java:187  | Closing {Score 1}
