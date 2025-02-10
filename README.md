@@ -7,6 +7,9 @@
 
 Инструкция по запуску
 
+Скачайте "Tesseract-OCR" с официального сайта
+Скачайте "Fluidsynth" с официального сайта
+
 Скачайте репозиторий на свой компьютер:
 
 git clone https://github.com/OxXity/preproff_audio_project.git
@@ -14,6 +17,16 @@ git clone https://github.com/OxXity/preproff_audio_project.git
 Установите все необходимые зависимости:
 
 pip install -r requirements.txt
+
+Пропишите в Системных Переменных:
+"TESSDATA_PREFIX" с указанием на папку tessdata в Tesseract-OCR
+
+Пропишите в Переменных Среды (path):
+Указание на папку Tesseract-OCR
+Указание на папку bin внутри директории с fluidsynth
+
+Пропишите Переменные Среды для своего пользователя:
+"FLUIDSYNTH" с указанием на папку bin в директории с fluidsynth
 
 Запустите веб-приложение:
 
