@@ -22,7 +22,7 @@ pip install -r requirements.txt
 "TESSDATA_PREFIX" с указанием на папку tessdata в Tesseract-OCR
 
 Пропишите в Переменных Среды (path):
-Указание на папку Tesseract-OCR
+Указание на папку Tesseract-OCR;
 Указание на папку bin внутри директории с fluidsynth
 
 Пропишите Переменные Среды для своего пользователя:
